@@ -1,5 +1,9 @@
 language: java
 
+env:
+  global:
+    - SURGE_LOGIN=luigi.caiffa@gmail.com
+    - secure: "FH2SaDb5sv3OXaAqKlu0YTVgQs2vwtfhBhG/G3exBfQ4R+DUbPOkBemr0RZht2xaCTY75DYG8rjxXrAH5LvnAJAlCo56BXEO7V9NDcWrcUXQ0JuCJkFlsDuUuzlHw9ZV42vMFlOdRwNrm8BPDzNV1gp0EmU9kX5fc8/yv7frv+shJfYJENEN0Ux9rjhh45RLR/OVnaaLV6m2TFEueUjNH3BfsVLVlYOcegEBedih1SlvHB5Fqw0su6I/yhy3y5m5moyVn2al815N1CMyRDSdkgde1Iaq3O85iUVeyJ+ckVVU2xEvgf54fXVPNl367r8vhBJ4p5dirA82yEH7YrcPNFlpizisxgYLRn52XSmZ3V8qoMl9J6kbdSG0aTFAtzbQBkJDtlfBAgmb6CQ2w61ol2JmWbqvekXSlXdGE7ndKJX2Knf4WeTGWrlaBCDxahEAbym0M1yGTz+T27VnDkZ3+ieu9ldHX3kbbTm36gKP5SsmXnkVEUB+4JBRY8pxarvAIQTUd3UvX2996srZ0shakF6gY1msoXROVyf+jH9S14/wDk3BXHTTOmqXXn0yJLG/ICuT/xyIQV1VBysbrVvZc/eXPEUKRN+BYNU0yT+H44ahQ74h4p3cqcDg79h9ig6dIyNSUT7nqbes3wHZ8aLDp1fZUZO6OZg674geuxsg/Qo="
 #Disable Travis install phase
 install:
   - echo "Do nothing"
@@ -7,3 +11,8 @@ install:
 #Execute our custom build
 script:
   - ./gradlew clean buildDashboard
+
+deploy:
+  provider: surge
+  project: build/reports/
+  domain: scm-lcaiffa-reports-surge.sh
