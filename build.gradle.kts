@@ -2,7 +2,7 @@ plugins {
     `java-library`
     jacoco
     `build-dashboard`
-    id("com.gradle.build-scan") version "1.16"
+    id("com.gradle.build-scan") version "2.0.2"
 }
 
 repositories {
