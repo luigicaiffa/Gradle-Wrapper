@@ -1,5 +1,15 @@
 language: java
 
+jdk:
+  - openjdk7
+  - openjdk8
+  - openjdk9
+  - openjdk10
+  - openjdk11
+  - openjdk12
+  - oraclejdk8
+  - oraclejdk9
+
 env:
   global:
     - SURGE_LOGIN=luigi.caiffa@gmail.com
