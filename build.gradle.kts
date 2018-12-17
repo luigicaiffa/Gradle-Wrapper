@@ -2,10 +2,16 @@ plugins {
     `java-library`
     jacoco
     `build-dashboard`
+    id("com.gradle.build-scan") version "1.16"
 }
 
 repositories {
     mavenCentral()
+}
+
+buildScan {
+    setTermsOfServiceUrl("https://gradle.com/terms-of-service")
+    setTermsOfServiceAgree("yes")
 }
 
 dependencies {

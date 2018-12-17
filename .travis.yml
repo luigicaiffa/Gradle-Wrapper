@@ -19,7 +19,7 @@ install:
 
 #Execute our custom build
 script:
-  - ./gradlew clean buildDashboard
+  - ./gradlew clean buildDashboard --scan
 
 deploy:
   provider: surge
