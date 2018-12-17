@@ -16,3 +16,5 @@ deploy:
   provider: surge
   project: build/reports/
   domain: scm-lcaiffa-reports-surge.sh
+  on:
+    all_branches: true
